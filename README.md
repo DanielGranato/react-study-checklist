@@ -22,6 +22,16 @@ Throughout this project, I will explore:
 
 ---
 
+## 🧩 Working with an Existing Codebase
+
+This project represents my first experience working on a React application that was already partially developed and structured.
+
+Instead of building the application from scratch, I had to read, interpret, and understand existing components and code before implementing new features.
+
+This introduced an important aspect of professional software development: working within an existing codebase and extending it without starting from zero.
+
+---
+
 ## 🛠️ Technologies
 
 | Category | Tool / Tech |
@@ -52,3 +62,4 @@ Node.js + NPM
 React + Vite
     ↓
 React Hooks & Context (Current Stage)
+
