@@ -4,8 +4,6 @@ import './dialog.style.css'
 import { IconClose } from "../icons";
 
 export function Dialog({ isOpen, onClose, children }) {
-    // não deveríamos fazer buscas no DOM desse jeito!
-    // const dialog = document.querySelector("dialog");
 
     const dialogRef = useRef(null)
 
@@ -16,6 +14,14 @@ export function Dialog({ isOpen, onClose, children }) {
             closeDialog()
         }
     }, [isOpen])
+
+    useEffect(() => {
+        const dialog = dialogRef.current
+        dialog?.addEventListener('close', onClose)
+        return () => {
+            dialog?.removeEventListener('close', onClose)
+        }
+    }, [onClose])
 
     // "Show the dialog" button opens the dialog modally
     const openDialog = () => {
